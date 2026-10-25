@@ -3,154 +3,80 @@
 <head>
 <meta charset="UTF-8">
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
-<title>AI Tư Vấn Hướng Nghiệp 2026-2036 - Hải Phòng</title>
+<title>AI Hướng Nghiệp Holland 60 Câu - Tư Vấn & Lộ Trình 2026</title>
 <style>
-*{box-sizing:border-box} body{font-family:'Segoe UI',Arial,sans-serif;margin:0;background:#f8fafc;color:#1e293b}
-header{background:linear-gradient(135deg,#0f172a,#4f46e5);color:#fff;padding:40px 20px;text-align:center}
-header h1{margin:0;font-size:28px} header p{opacity:.9}
-.wrap{max-width:1000px;margin:-30px auto 30px;display:grid;grid-template-columns:1fr 380px;gap:20px;padding:20px}
-.card{background:#fff;border-radius:16px;padding:20px;box-shadow:0 8px 24px rgba(0,0,0,.08)}
-h2{color:#4f46e5;margin-top:0}
-input,select,textarea{width:100%;padding:12px;border:1px solid #e2e8f0;border-radius:10px;margin:8px 0 14px}
-.btn{background:#4f46e5;color:#fff;border:none;padding:14px 18px;border-radius:10px;font-weight:700;cursor:pointer;width:100%}
+body{font-family:'Segoe UI',sans-serif;background:#f5f7fb;margin:0;color:#1e293b}
+header{background:linear-gradient(135deg,#4f46e5,#06b6d4);color:#fff;padding:28px;text-align:center}
+.container{max-width:920px;margin:20px auto;background:#fff;padding:24px;border-radius:16px;box-shadow:0 10px 30px rgba(0,0,0,.08)}
+.question{padding:10px 0;border-bottom:1px solid #eee}
+.btn{width:100%;padding:14px;background:#4f46e5;color:#fff;border:none;border-radius:10px;font-size:18px;font-weight:700;cursor:pointer;margin-top:15px}
 .btn:hover{background:#3730a3}
-.badge{display:inline-block;background:#e0e7ff;color:#3730a3;padding:5px 10px;border-radius:20px;font-size:12px;margin:4px}
-.result-line{padding:10px;border-left:4px solid #4f46e5;margin:10px 0;background:#f1f5f9;border-radius:6px}
-.kpi{display:grid;grid-template-columns:1fr 1fr;gap:10px}
-.kpi div{background:#f8fafc;padding:12px;border-radius:10px;text-align:center}
-@media(max-width:900px){.wrap{grid-template-columns:1fr}}
+.result{display:none;margin-top:20px;padding:20px;background:#eef2ff;border-radius:12px}
+.bar{height:14px;background:#c7d2fe;border-radius:8px;overflow:hidden;margin:5px 0 12px}
+.bar span{display:block;height:100%;background:#4f46e5}
+.card{border:1px solid #e5e7eb;padding:14px;border-radius:10px;margin:10px 0;background:#fff}
+.badge{display:inline-block;background:#e0e7ff;color:#3730a3;padding:4px 10px;border-radius:20px;font-size:12px;margin:2px}
 </style>
 </head>
 <body>
 <header>
-<h1>🤖 AI Tư Vấn Hướng Nghiệp Thông Minh</h1>
-<p>Dựa trên Trắc nghiệm Holland + Xu hướng Việc làm & Xã hội 2026 + Xu hướng nghề 10 năm tới</p>
-<p><a href="index.html" style="color:#a5b4fc">← Quay lại làm Trắc nghiệm 60 câu</a></p>
+<h1>🤖 AI Hướng Nghiệp - Trắc Nghiệm Holland 60 Câu</h1>
+<p>Có dấu chuẩn - Có AI tư vấn - Có lộ trình nghề nghiệp Hải Phòng 2026-2036</p>
+<p>Kho: dinhthitulinh07-cloud / AI-h-ng-nghi-p</p>
 </header>
-
-<div class="wrap">
-<div class="card">
-<h2>1. Nhập thông tin của bạn</h2>
-<input id="ten" placeholder="Họ tên (VD: Linh, học sinh lớp 12 Hải Phòng)">
-<select id="lop"><option value="">Bạn đang học lớp mấy?</option><option>Lớp 9</option><option>Lớp 10</option><option>Lớp 11</option><option>Lớp 12</option><option>Sinh viên</option></select>
-<select id="mon"><option value="">Môn học bạn giỏi nhất?</option><option>Toán - Tin</option><option>Văn - Ngoại ngữ</option><option>Lý - Hóa - Sinh</option><option>Vẽ - Nhạc - Thiết kế</option><option>Thể thao - Kỹ thuật</option></select>
-<input id="holland" placeholder="Mã Holland của bạn (VD: I-R-C) - Lấy từ trang trắc nghiệm">
-<textarea id="sothich" rows="3" placeholder="Bạn thích làm gì nhất khi rảnh? (VD: sửa máy tính, quay TikTok, dạy em học...)"></textarea>
-<button class="btn" onclick="tuVan()">AI Phân Tích & Định Hướng Ngay</button>
-
-<div id="ketqua" style="margin-top:20px;display:none"></div>
-</div>
-
-<div class="card">
-<h2>📊 Dữ liệu AI đang dùng</h2>
-<div class="kpi">
-<div><b>2026</b><br><span class="badge">Chuyển đổi số</span><br><small>80% DN cần nhân sự AI, Data</small></div>
-<div><b>2030</b><br><span class="badge">Công nghiệp xanh</span><br><small>Logistics, cảng biển, năng lượng tái tạo</small></div>
-</div>
-<h3 style="margin-top:20px">6 Xu hướng nghề HOT ở Hải Phòng - Hà Nội</h3>
-<div class="result-line"><b>1. AI & Dữ liệu:</b> Lương 15-50tr, thiếu 200.000 nhân sự toàn quốc</div>
-<div class="result-line"><b>2. Logistics & XNK:</b> Hải Phòng cần 50.000 người/năm nhờ cảng Lạch Huyện</div>
-<div class="result-line"><b>3. Công nghệ ô tô điện:</b> VinFast, LG cần kỹ thuật viên</div>
-<div class="result-line"><b>4. Du lịch & Dịch vụ:</b> Cát Bà - Đồ Sơn phục hồi mạnh 2026</div>
-<div class="result-line"><b>5. Chăm sóc sức khỏe & Tâm lý:</b> Già hóa dân số</div>
-<div class="result-line"><b>6. Sáng tạo nội dung & TMĐT:</b> TikTok Shop, Designer AI</div>
-<p><a href="xu-h%C6%B0%E1%BB%9Bng-vi%E1%BB%87c-l%C3%A0m-v%C3%A0-x%C3%A3-h%E1%BB%99i-2026.htm">Xem chi tiết file Xu hướng 2026</a><br>
-<a href="xu-huong-nghe-nghiep-trong-10-nam-toi.html">Xem file Xu hướng 10 năm tới</a></p>
+<div class="container">
+<p><b>Hướng dẫn:</b> Tích vào những hoạt động bạn YÊU THÍCH hoặc LÀM TỐT. Càng tích nhiều kết quả càng chính xác.</p>
+<div id="quiz"></div>
+<button class="btn" onclick="tinhDiem()">Xem Kết Quả - AI Tư Vấn - Lộ Trình Đi</button>
+<div id="result" class="result"></div>
+<div style="text-align:center;margin-top:15px">
+<a href="xu-huong-nghe-nghiep-trong-10-nam-toi.html">🚀 Xu hướng nghề 10 năm</a> | 
+<a href="xu-h%C6%B0%E1%BB%9Bng-vi%E1%BB%87c-l%C3%A0m-v%C3%A0-x%C3%A3-h%E1%BB%99i-2026.htm">📊 Xu hướng việc làm 2026</a>
 </div>
 </div>
-
 <script>
-const thuVienNghe = {
-"R": {ten:"Kỹ thuật - Thực tế", nghes:["Kỹ sư ô tô điện VinFast","Kỹ thuật viên tự động hóa KCN Đình Vũ","Nhân viên Logistics cảng"], loTrinh:"1. Học CĐ Bách Khoa Hải Phòng / ĐH Hàng Hải<br>2. Học chứng chỉ AutoCAD, PLC, lái xe nâng<br>3. Thực tập 3 tháng tại LG, VinFast - lương 8-12tr đầu ra 15-25tr"},
-"I": {ten:"Nghiên cứu - Phân tích", nghes:["Lập trình viên AI/Python","Data Analyst cho doanh nghiệp cảng","Kỹ sư môi trường"], loTrinh:"1. Khối A/A1/B - ĐH CNTT, Bách Khoa, KHTN<br>2. Học Python, SQL, PowerBI trên Coursera<br>3. Làm 2-3 dự án phân tích dữ liệu cảng biển - lương khởi điểm 18-30tr"},
-"A": {ten:"Sáng tạo - Nghệ thuật", nghes:["UI/UX Designer cho App Logistics","Content Creator du lịch Hải Phòng","Thiết kế 3D nội thất"], loTrinh:"1. Học FPT Arena / ĐH Mỹ thuật<br>2. Xây portfolio Behance, TikTok 100 video<br>3. Dùng AI Midjourney + CapCut - thu nhập 12-40tr + freelance"},
-"S": {ten:"Xã hội - Giáo dục", nghes:["Giáo viên STEM","Tư vấn tâm lý học đường","HR tuyển dụng KCN"], loTrinh:"1. ĐH Sư phạm / Tâm lý / Xã hội học<br>2. Chứng chỉ tư vấn, kỹ năng mềm<br>3. Thực tập tại trường học, DN - lương 10-22tr, rất ổn định"},
-"E": {ten:"Kinh doanh - Quản lý", nghes:["Quản lý vận hành TikTok Shop","Sales Logistics xuất nhập khẩu","Quản lý khách sạn Cát Bà"], loTrinh:"1. ĐH Hàng Hải / Ngoại thương / Quản trị<br>2. Học Digital Marketing, tiếng Trung/Anh<br>3. Bán hàng online thử 1 tháng - lương 10tr + hoa hồng không giới hạn"},
-"C": {ten:"Văn phòng - Tài chính", nghes:["Kế toán KCN","Nhân viên chứng từ XNK/Hải quan","Giao dịch viên ngân hàng"], loTrinh:"1. ĐH Kinh tế, Tài chính, Hàng Hải<br>2. Giỏi Excel, Misa, TOEIC 650+<br>3. Thực tập phòng kế toán - lương 9-20tr"}
-}
-
-function tuVan(){
-  let ten = document.getElementById('ten').value || 'Bạn';
-  let holland = document.getElementById('holland').value.toUpperCase() || 'R-I-A';
-  let mon = document.getElementById('mon').value || 'Chưa rõ';
-  let lop = document.getElementById('lop').value || 'THPT';
-  let sothich = document.getElementById('sothich').value || 'khám phá';
-
-  // Tách mã Holland thành mảng
-  let ma = holland.split(/[-, ]+/).filter(c=> 'RIASEC'.includes(c));
-  if(ma.length==0) ma = ['I','R','C'];
-  
-  let phanTichTinhCach = {
-    R: "bạn là người thực tế, thích hành động, nhìn thấy kết quả ngay. Bạn không thích nói nhiều, thích làm ra sản phẩm thật.",
-    I: "bạn tò mò, thích phân tích, logic, thích tìm ra nguyên nhân. Bạn hợp với môi trường yên tĩnh để nghiên cứu sâu.",
-    A: "bạn sáng tạo, có gu riêng, ghét sự gò bó. Bạn cần môi trường tự do để thể hiện ý tưởng.",
-    S: "bạn ấm áp, thích giúp đỡ, thấu hiểu người khác. Bạn hạnh phúc khi thấy người khác phát triển nhờ mình.",
-    E: "bạn năng động, thích lãnh đạo, thuyết phục, thích cạnh tranh và muốn tạo ra ảnh hưởng.",
-    C: "bạn ngăn nắp, cẩn thận, thích quy trình rõ ràng, làm việc chính xác và có trách nhiệm."
-  };
-
-  let loTrinhChiTiet = "";
-  let maChinh = ma[0];
-
-  if(maChinh=='R') loTrinhChiTiet = `
-  <b>Giai đoạn 1 (Ngay bây giờ - Lớp ${lop}):</b> Học tốt Lý, Công nghệ. Tự tháo lắp 1 thiết bị điện tử cũ, học AutoCAD cơ bản trên Youtube.<br>
-  <b>Giai đoạn 2 (2026-2028):</b> Thi vào Cao đẳng Bách Khoa Hải Phòng / ĐH Hàng Hải ngành Cơ khí - Ô tô điện - Tự động hóa. Học thêm chứng chỉ An toàn điện, PLC S7-1200.<br>
-  <b>Giai đoạn 3 (2029-2030):</b> Thực tập có lương tại VinFast, LG Display KCN Tràng Duệ. Lộ trình: Kỹ thuật viên (12tr) -> Kỹ sư bảo trì (22tr) -> Quản lý xưởng (35tr).`;
-
-  if(maChinh=='I') loTrinhChiTiet = `
-  <b>Giai đoạn 1:</b> Học chắc Toán, Tin. Học Python miễn phí trên CodeLearn, làm 1 project phân tích điểm thi của lớp.<br>
-  <b>Giai đoạn 2:</b> Thi khối A1/D - ĐH CNTT, Bách Khoa Hà Nội/Hải Phòng. Học thêm Data Analysis, AI căn bản.<br>
-  <b>Giai đoạn 3:</b> Intern Data Analyst cho công ty Logistics cảng biển. Lộ trình: Intern (8tr) -> Junior (18tr) -> AI Engineer (45tr) - Nghề thiếu hụt nhất 2026.`;
-
-  if(maChinh=='A') loTrinhChiTiet = `
-  <b>Giai đoạn 1:</b> Mỗi tuần làm 2 sản phẩm sáng tạo (ảnh, video TikTok về Hải Phòng). Học Canva, CapCut.<br>
-  <b>Giai đoạn 2:</b> Học FPT Arena, FPT Polytechnic ngành Thiết kế đồ họa / Truyền thông. Xây portfolio 30 sản phẩm.<br>
-  <b>Giai đoạn 3:</b> Làm Designer cho công ty du lịch Cát Bà, hoặc Content Creator tự do. Lộ trình: Freelancer (10tr) -> Designer chính (25tr) -> Creative Manager (40tr).`;
-
-  if(maChinh=='S') loTrinhChiTiet = `
-  <b>Giai đoạn 1:</b> Tham gia CLB tình nguyện, tập lắng nghe bạn bè. Đọc sách về tâm lý.<br>
-  <b>Giai đoạn 2:</b> Học Sư phạm, Tâm lý, Công tác xã hội tại ĐH Hải Phòng / ĐH Giáo dục.<br>
-  <b>Giai đoạn 3:</b> Làm giáo viên kỹ năng sống, tư vấn tâm lý học đường hoặc HR tại KCN. Lộ trình: Giáo viên (9tr) -> Chuyên viên tư vấn (18tr) -> Trưởng phòng nhân sự (30tr). Rất ổn định.`;
-
-  if(maChinh=='E') loTrinhChiTiet = `
-  <b>Giai đoạn 1:</b> Tập bán 1 món đồ online trên TikTok Shop, tập thuyết trình trước lớp.<br>
-  <b>Giai đoạn 2:</b> Học Quản trị kinh doanh, Marketing, Logistics tại ĐH Hàng Hải / Ngoại thương.<br>
-  <b>Giai đoạn 3:</b> Làm Sales xuất nhập khẩu, quản lý vận hành shop. Lộ trình: Sales (10tr + hoa hồng) -> Trưởng nhóm (25tr) -> Giám đốc kinh doanh / Chủ shop (50tr+).`;
-
-  if(maChinh=='C') loTrinhChiTiet = `
-  <b>Giai đoạn 1:</b> Rèn Excel, gõ 10 ngón, sắp xếp hồ sơ gia đình ngăn nắp.<br>
-  <b>Giai đoạn 2:</b> Học Kế toán, Tài chính-Ngân hàng, Hải quan tại ĐH Hàng Hải / Kinh tế.<br>
-  <b>Giai đoạn 3:</b> Làm kế toán KCN, nhân viên chứng từ XNK. Lộ trình: Nhân viên (9tr) -> Kế toán tổng hợp (18tr) -> Kế toán trưởng / Chuyên viên hải quan (32tr).`;
-
-  let html = `
-  <h2>🎯 AI Phân Tích Sâu Cho ${ten}</h2>
-  <p><span class="badge">Lớp: ${lop}</span> <span class="badge">Mã Holland: ${holland}</span> <span class="badge">Giỏi: ${mon}</span></p>
-  
-  <div class="result-line"><b>1. AI Giải mã tính cách:</b><br>
-  Mã chính của bạn là <b>${maChinh}</b> - ${phanTichTinhCach[maChinh]}<br>
-  Sở thích "${sothich}" cho thấy bạn có động lực nội tại rất mạnh với nhóm ${maChinh}. Kết hợp với ${ma[1]||'nhóm phụ'} bạn sẽ vừa giỏi chuyên môn vừa có khả năng ${ma.includes('S')||ma.includes('E')?'làm việc với con người':'làm việc độc lập'}.
-  </div>
-
-  <div class="result-line"><b>2. AI Định hướng 3 nghề "Chân ái" (Dựa trên file xu hướng 2026 bạn tải lên):</b><br>
-    - <b>Nghề 1 (Ngắn hạn - 1 năm tới):</b> ${thuVienNghe[maChinh].nghes[0]} - Dễ bắt đầu ngay, nhu cầu tại Hải Phòng cao.<br>
-    - <b>Nghề 2 (Trung hạn - 3-5 năm):</b> ${thuVienNghe[maChinh].nghes[1]} - Cần học thêm chứng chỉ, thu nhập tăng 2 lần.<br>
-    - <b>Nghề 3 (Dài hạn - 10 năm tới):</b> ${thuVienNghe[maChinh].nghes[2]} - Trở thành chuyên gia, dẫn dắt nhóm.
-  </div>
-
-  <div class="result-line"><b>3. Lộ trình AI vạch sẵn - Từng bước đi cụ thể:</b><br>${loTrinhChiTiet}</div>
-
-  <div class="result-line" style="border-left-color:#10b981;background:#ecfdf5"><b>4. Lời khuyên AI dành riêng cho bạn:</b><br>
-    - Đừng chọn nghề chỉ vì lương cao, hãy chọn nghề bạn làm 8 tiếng không chán. Với mã ${holland}, bạn sẽ hạnh phúc nhất khi được ${maChinh=='R'?'tạo ra sản phẩm':'giải quyết vấn đề / giúp đỡ người khác'}.<br>
-    - Kỹ năng bắt buộc cho mọi nghề 2026: Tiếng Anh giao tiếp + Dùng AI (ChatGPT, Canva AI) + Tin học văn phòng.<br>
-    - Nếu bạn ở Hải Phòng: Tận dụng cảng Lạch Huyện, du lịch Cát Bà và các KCN. Đây là 3 nơi có việc làm nhiều nhất cho mã ${holland}.
-  </div>
-  <button class="btn" onclick="window.print()">In Báo Cáo AI Nộp Cô Giáo</button>
-  `;
-
-  let kq = document.getElementById('ketqua');
-  kq.style.display='block'; kq.innerHTML=html;
-  kq.scrollIntoView({behavior:'smooth'});
+const data=[
+{R:"Sửa chữa xe, máy móc, đồ điện tử",I:"Tìm hiểu vì sao sao trời sáng, vũ trụ hoạt động",A:"Vẽ, thiết kế, sáng tạo logo, poster",S:"Giúp bạn bè giải quyết mâu thuẫn",E:"Làm lớp trưởng, dẫn dắt nhóm",C:"Sắp xếp sổ sách, ghi chép cẩn thận"},
+{R:"Làm việc ngoài trời, trồng cây, chăn nuôi",I:"Làm thí nghiệm hóa học, vật lý",A:"Viết truyện, làm thơ, viết blog",S:"Dạy học, giảng bài cho em nhỏ",E:"Thuyết phục người khác mua hàng",C:"Kiểm tra, đối chiếu số liệu"},
+{R:"Lắp ráp mô hình, robot",I:"Giải các bài toán khó, logic",A:"Chơi nhạc cụ, hát, nhảy",S:"Tham gia hoạt động tình nguyện",E:"Mở một shop nhỏ, kinh doanh",C:"Làm việc với bảng tính Excel"},
+{R:"Dùng dụng cụ cầm tay: búa, kìm, khoan",I:"Đọc sách khoa học, khám phá tự nhiên",A:"Thiết kế thời trang, trang trí",S:"Lắng nghe, tư vấn tâm lý",E:"Tranh biện, thi hùng biện",C:"Tuân thủ quy trình, nội quy"},
+{R:"Lái xe, vận hành máy",I:"Phân tích dữ liệu, biểu đồ",A:"Chụp ảnh, quay phim, dựng video",S:"Chăm sóc người ốm, trẻ em",E:"Lập kế hoạch, đặt mục tiêu doanh số",C:"Lưu trữ hồ sơ ngăn nắp"},
+{R:"Xây dựng, đo đạc công trình",I:"Nghiên cứu về AI, công nghệ mới",A:"Diễn kịch, làm MC",S:"Làm việc nhóm, kết nối mọi người",E:"Mạo hiểm, thử thách kinh doanh",C:"Tính toán chi phí, ngân sách"},
+{R:"Bảo trì, sửa chữa",I:"Tìm ra nguyên nhân, giải pháp",A:"Trang trí không gian sống",S:"Hòa giải, tạo không khí vui vẻ",E:"Gặp gỡ đối tác, khách hàng",C:"Làm việc chính xác, ít sai sót"},
+{R:"Làm đồ thủ công, gỗ",I:"Quan sát, ghi chép thí nghiệm",A:"Sáng tác, có ý tưởng độc lạ",S:"Hướng dẫn, huấn luyện",E:"Quản lý, điều hành",C:"Sử dụng phần mềm văn phòng"},
+{R:"Công việc dùng sức khỏe, tay chân",I:"Học sâu về một chủ đề",A:"Thích tự do, không gò bó",S:"Thấu hiểu cảm xúc người khác",E:"Cạnh tranh, muốn chiến thắng",C:"Có kế hoạch rõ ràng từng bước"},
+{R:"Thích kết quả thấy được ngay: sản phẩm, công trình",I:"Thích đặt câu hỏi tại sao, như thế nào",A:"Thích thể hiện cá tính riêng",S:"Thích giúp người khác phát triển",E:"Thích tạo ảnh hưởng đến người khác",C:"Thích ổn định, an toàn"}
+];
+const labels={R:"Realistic - Kỹ thuật, Thực tế",I:"Investigative - Nghiên cứu, Phân tích",A:"Artistic - Nghệ thuật, Sáng tạo",S:"Social - Xã hội, Giúp đỡ",E:"Enterprising - Quản lý, Kinh doanh",C:"Conventional - Nghiệp vụ, Văn phòng"};
+const thuVien={
+R:{ten:"Kỹ thuật - Công nghệ - Logistics",list:["Kỹ sư ô tô điện VinFast, Kỹ thuật viên tự động hóa","Kỹ sư Logistics cảng biển Hải Phòng, Lạch Huyện","Kỹ thuật viên bảo trì KCN Đình Vũ, Tràng Duệ"],lo:"<b>GĐ1 (Hiện tại):</b> Học tốt Lý, Công nghệ, tự tháo lắp đồ điện tử, học AutoCAD trên Youtube.<br><b>GĐ2 (2026-2028):</b> Thi CĐ Bách Khoa HP / ĐH Hàng Hải ngành Cơ khí - Tự động hóa. Học PLC, An toàn điện.<br><b>GĐ3 (2029-2030):</b> Thực tập có lương tại VinFast, LG. Lộ trình: KTV 12tr -> Kỹ sư 22tr -> Quản lý xưởng 35tr.",luong:"12-25tr, thiếu hụt nặng do công nghiệp 4.0"},
+I:{ten:"Nghiên cứu - Công nghệ - Dữ liệu AI",list:["Data Analyst, AI Engineer, Lập trình viên Python","Nhà nghiên cứu môi trường, sinh học cảng biển","Bác sĩ, Dược sĩ nghiên cứu"],lo:"<b>GĐ1:</b> Học chắc Toán, Tin, học Python free trên CodeLearn, làm 1 project phân tích điểm thi.<br><b>GĐ2:</b> Thi khối A1/D vào CNTT, Bách Khoa. Học SQL, PowerBI, AI cơ bản.<br><b>GĐ3:</b> Intern Data cho công ty Logistics. Lộ trình: Intern 8tr -> Junior 18tr -> AI Engineer 45tr - HOT nhất 2026.",luong:"18-50tr, thiếu 200.000 nhân sự cả nước"},
+A:{ten:"Sáng tạo - Nghệ thuật - Truyền thông",list:["UI/UX Designer App Logistics, Designer 3D","Content Creator du lịch Cát Bà - Đồ Sơn, Quay dựng","Kiến trúc sư, Thiết kế thời trang"],lo:"<b>GĐ1:</b> Mỗi tuần làm 2 sản phẩm (ảnh, video TikTok về Hải Phòng). Học Canva, CapCut.<br><b>GĐ2:</b> Học FPT Arena / Mỹ thuật. Xây portfolio 30 sản phẩm Behance.<br><b>GĐ3:</b> Làm Designer công ty du lịch hoặc Freelance. Lộ trình: Freelancer 10tr -> Designer chính 25tr -> Creative Manager 40tr.",luong:"12-40tr + freelance, bùng nổ kinh tế sáng tạo"},
+S:{ten:"Xã hội - Giáo dục - Chăm sóc",list:["Giáo viên STEM, Tư vấn tâm lý học đường","Điều dưỡng, Công tác xã hội, Chuyên viên HR KCN","Hướng dẫn viên du lịch cộng đồng"],lo:"<b>GĐ1:</b> Tham gia CLB tình nguyện, tập lắng nghe, đọc sách tâm lý.<br><b>GĐ2:</b> Học Sư phạm, Tâm lý, Xã hội học tại ĐH Hải Phòng.<br><b>GĐ3:</b> Làm GV kỹ năng sống, HR KCN. Lộ trình: GV 9tr -> Chuyên viên 18tr -> Trưởng phòng nhân sự 30tr. Rất ổn định.",luong:"10-22tr, nhu cầu tăng do già hóa dân số"},
+E:{ten:"Quản lý - Kinh doanh - Khởi nghiệp",list:["Quản lý vận hành TikTok Shop, Sales XNK","Chủ shop, Startup thương mại điện tử, Logistics","MC, Quản lý dự án, Nhà hàng khách sạn"],lo:"<b>GĐ1:</b> Tập bán 1 món online, tập thuyết trình trước lớp.<br><b>GĐ2:</b> Học QTKD, Marketing tại ĐH Hàng Hải / Ngoại thương. Học Digital Marketing.<br><b>GĐ3:</b> Làm Sales XNK, vận hành shop. Lộ trình: Sales 10tr+hoa hồng -> Trưởng nhóm 25tr -> GĐ kinh doanh / Chủ shop 50tr+.",luong:"10tr - không giới hạn, cơ hội lớn ở cảng & du lịch"},
+C:{ten:"Văn phòng - Tài chính - Quản trị",list:["Kế toán, Kiểm toán, Phân tích tài chính","Nhân viên hành chính, Thư ký, Quản lý hồ sơ XNK","Chuyên viên ngân hàng, Hải quan"],lo:"<b>GĐ1:</b> Rèn Excel, gõ 10 ngón, sắp xếp hồ sơ gia đình.<br><b>GĐ2:</b> Học Kế toán, Tài chính, Hải quan tại ĐH Hàng Hải / Kinh tế. Học Misa, TOEIC 650+.<br><b>GĐ3:</b> Làm kế toán KCN, chứng từ XNK. Lộ trình: NV 9tr -> KT tổng hợp 18tr -> KT trưởng / Hải quan 32tr.",luong:"9-22tr, an toàn, phù hợp KCN, cảng, ngân hàng"}
+};
+let html="";let idx=0;
+data.forEach(row=>{["R","I","A","S","E","C"].forEach(c=>{idx++;html+=`<div class=question><label><input type=checkbox data-type=${c}> <b>${c} - Câu ${idx}:</b> ${row[c]}</label></div>`})});
+document.getElementById("quiz").innerHTML=html;
+function tinhDiem(){
+let scores={R:0,I:0,A:0,S:0,E:0,C:0};
+document.querySelectorAll("#quiz input:checked").forEach(el=>scores[el.dataset.type]++);
+let sorted=Object.entries(scores).sort((a,b)=>b[1]-a[1]);
+let top3=sorted.slice(0,3);
+let maChinh=top3[0][0];
+let out=`<h2>🎯 Kết quả Holland: ${top3.map(x=>x[0]).join("-")}</h2>`;
+["R","I","A","S","E","C"].forEach(c=>{out+=`<div><b>${c} - ${labels[c]}: ${scores[c]}/10</b><div class=bar><span style=width:${scores[c]*10}%></span></div></div>`});
+out+=`<h2>🤖 AI Phân Tích & Định Hướng Cho Bạn</h2>`;
+out+=`<p>Bạn thuộc nhóm chính <b>${maChinh} - ${labels[maChinh]}</b>. Đây là nhóm có nhu cầu tuyển dụng cao nhất tại Hải Phòng 2026 theo file xu hướng bạn đã tải lên.</p>`;
+top3.forEach(([code,diem],i)=>{
+let info=thuVien[code];
+out+=`<div class=card><span class=badge>TOP ${i+1} - ${diem} điểm</span> <b>${code}: ${info.ten}</b><br><b>Nghề gợi ý:</b> ${info.list.join("; ")}<br><br><b>🛣️ Lộ trình AI vạch sẵn:</b><br>${info.lo}<br><br><b>💰 Lương & Xu hướng:</b> ${info.luong}</div>`;
+});
+out+=`<div class=card style=background:#fffbeb><b>💡 Lời khuyên cá nhân hóa:</b><br>- Đừng chọn nghề chỉ vì lương cao, hãy chọn nghề bạn làm 8 tiếng không chán. Với mã ${top3.map(x=>x[0]).join("-")}, bạn hạnh phúc nhất khi được tạo ra sản phẩm thật / giải quyết vấn đề.<br>- Kỹ năng bắt buộc 2026: Tiếng Anh giao tiếp + Dùng AI (ChatGPT, Canva AI) + Tin học văn phòng.<br>- Lợi thế Hải Phòng: Cảng Lạch Huyện, KCN Tràng Duệ - Đình Vũ, du lịch Cát Bà - Đồ Sơn đang cần gấp nhân sự mã ${maChinh}.</div><button class=btn onclick=window.print()>In / Lưu PDF Báo Cáo Nộp Cô</button>`;
+let r=document.getElementById("result");r.style.display="block";r.innerHTML=out;window.scrollTo({top:r.offsetTop,behavior:"smooth"});
 }
 </script>
 </body>
 </html>
+ 
